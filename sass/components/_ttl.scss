@@ -4,5 +4,35 @@
 
 // SECTION-TITLE01
 .sec-ttl01 {
+  display: inline-block;
+  padding: 20px 32px;
+  background-color: #fff;
+  border: 1px solid $primary-color;
+  transform: skewX(-20deg);
+  box-shadow: 10px 10px 0px 0px #e5ffcb;
+  position: relative;
 
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 45px;
+    background-image: url(../img/index/shape_ttl_glitter.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewX(20deg) translate(-20%,-50%);
+  }
+
+
+  .txt {
+    transform: skewX(20deg);
+    font-size: 3rem;
+    color: $navy;
+    font-weight: bold;
+    line-height: 1;
+
+  }
 }
