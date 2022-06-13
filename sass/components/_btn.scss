@@ -148,3 +148,24 @@
     }
   }
 }
+
+// SHADOW-BUTTON
+// ---------------
+// |     text     |
+// ---------------
+.shadow-btn {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  box-shadow: 10px 10px 0px 0px rgba(#e5ffcb, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .txt {
+    color: $primary-color;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8;
+  }
+}

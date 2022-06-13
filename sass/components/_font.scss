@@ -3,5 +3,11 @@
 @use '../foundation/mixins' as *;
 
 .c-borderFont {
-
+  color: #fff;
+  -webkit-text-stroke: 1px #333;
+  text-stroke: 1px #333;
+  font-family: $eng;
+  text-shadow: 4px 4px 0px #ccff99;
+  font-size: 7.8rem;
+  line-height: 1;
 }

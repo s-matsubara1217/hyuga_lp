@@ -200,3 +200,20 @@ function spanWrap(targetElm) {
   });
 }
 spanWrap('.split');
+
+/*-------------------------------
+ 	アコーディオン
+ -------------------------------*/
+$(function(){
+  $('.js-menu__link').each(function(){
+      $(this).on('click',function(){
+        $("+.description", this).slideToggle();
+        $(this).toggleClass("open");
+        return false;
+      });
+  });
+
+  $('.-accordion').each(function () {
+    $(this).find('dd:first .menu__link').addClass('open');
+  })
+});
