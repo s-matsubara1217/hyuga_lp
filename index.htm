@@ -59,15 +59,33 @@
 
     <!-- ヘッダー-->
     <header class="header">
+      <div class="mv__logo u-spOnly">
+        <div class="img img__shape">
+          <img src="img/index/mv_logo_shape.png" alt="ロゴ イラスト" class="ofi" loading="lazy">
+        </div>
+        <div class="img img__text">
+          <img src="img/index/mv_logo_text.png" alt="HYUGA PRIMARY CARE Co.Ltd" class="ofi" loading="lazy">
+        </div>
+      </div>
       <div class="header__wrap innerWrap">
         <div class="header__sub">
           <div class="img">
-            <img src="img/index/header_text_sub.png" alt="有料老人ホーム 福岡県春日市" class="ofi" loading="lazy">
+            <picture>
+              <!-- 768px以下の時表示 -->
+              <source srcset="img/index/header_text_sub_sp.png" media="(max-width: 768px)" alt="有料老人ホーム 福岡県春日市" class="ofi" loading="lazy" />
+              <!-- 769px以上の時表示 -->
+              <img src="img/index/header_text_sub.png" alt="有料老人ホーム 福岡県春日市" class="ofi" loading="lazy"/>
+            </picture>
           </div>
         </div>
         <h1 class="header__main">
           <div class="img">
-            <img src="img/index/header_text_main.png" alt="プライマリーケアホームひゅうが 春日ちくし台" class="ofi" loading="lazy">
+            <picture>
+              <!-- 768px以下の時表示 -->
+              <source srcset="img/index/header_text_main_sp.png" media="(max-width: 768px)" alt="プライマリーケアホームひゅうが 春日ちくし台" class="ofi" loading="lazy" />
+              <!-- 769px以上の時表示 -->
+              <img src="img/index/header_text_main.png" alt="プライマリーケアホームひゅうが 春日ちくし台" class="ofi" loading="lazy"/>
+            </picture>
           </div>
         </h1>
       </div>
@@ -79,7 +97,7 @@
 
       <!-- メインビジュアル -->
       <div class="mv">
-        <div class="mv__logo">
+        <div class="mv__logo u-pcOnly">
           <div class="img img__shape">
             <img src="img/index/mv_logo_shape.png" alt="ロゴ イラスト" class="ofi" loading="lazy">
           </div>
@@ -114,12 +132,13 @@
               <div class="text__head">
                 <h3 class="txt">
                   <span class="small">プライマリケアホームひゅうがは</span>
-                  こんな施設を目指します！
+                  <span class="medium">こんな施設を目指します！</span>
                 </h3>
               </div>
               <div class="text__body">
                 <p class="lead">
-                  関わる全ての人達が幸せになれる<br class="u-pcOnly">
+                  関わる全ての人達が<br class="u-spOnly">
+                  幸せになれる<br>
                   施設の実現を目指して
                 </p>
                 <p class="desc">
@@ -279,343 +298,345 @@
                 </div>
               </div>
               <div class="requirement__body">
-                <div class="requirement__list">
-                  <!-- 職種 ↓ -->
-                  <dl class="requirement__list__item">
-                    <div class="dtHolder">
-                      <dt>職種</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <dd>
-                        【1】施設長　【2】生活相談員　【3】訪問看護管理者　【4】看護師　【5】介護職
-                      </dd>
-                    </div>
-                  </dl>
-                  <!-- 仕事 ↓ -->
-                  <dl class="requirement__list__item -accordion">
-                    <div class="dtHolder">
-                      <dt>仕事</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <!-- 【1】施設長 ↓ -->
-                      <dd>
-                        <a href="" class="menu__link js-menu__link">
+                <div class="requirement__body__inner">
+                  <div class="requirement__list">
+                    <!-- 職種 ↓ -->
+                    <dl class="requirement__list__item">
+                      <div class="dtHolder">
+                        <dt>職種</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <dd>
+                          【1】施設長　【2】生活相談員　【3】訪問看護管理者　【4】看護師　【5】介護職
+                        </dd>
+                      </div>
+                    </dl>
+                    <!-- 仕事 ↓ -->
+                    <dl class="requirement__list__item -accordion">
+                      <div class="dtHolder">
+                        <dt>仕事</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <!-- 【1】施設長 ↓ -->
+                        <dd>
+                          <a href="" class="menu__link js-menu__link">
+                            <p class="txt">【1】施設長</p>
+                            <div class="i_box">
+                              <i class="one_i"></i>
+                            </div>
+                          </a>
+                          <p class="txt description">
+                            【新規開設有料老人ホーム施設長業務】<br>
+                            ＊入居者の管理（既往・現病歴の把握、入居促進、ベッドコントロール、入居時契約、退去時手続き、入退去時対応、家族との連絡調整）<br>
+                            ＊職員、スタッフの管理（面接、採用、育成、定期面談、労務管理、離職防止策対応等）<br>
+                            ＊運営管理（運営方針・理念に沿って提供、コンプライアンス、広報・営業活動等）<br>
+                            ＊収支管理（利用料・保険請求、各種経費管理、施設全体の収支管理等）<br>
+                            ＊行政対応（介護保険事業の届けや報告書、運営指導対応、消防計画の作成や提出等）<br>
+                            ＊関係各所対応（関連事業者との連絡調整等）<br>
+                            ＊苦情などの対応・窓口業務等、その他付随する業務
+                          </p>
+                        </dd>
+                        <!-- 【2】生活相談員 ↓ -->
+                        <dd>
+                          <a href="" class="menu__link js-menu__link">
+                            <p class="txt">【2】生活相談員</p>
+                            <div class="i_box">
+                              <i class="one_i"></i>
+                            </div>
+                          </a>
+                          <p class="txt description">
+                            【新規開設有料老人ホーム相談員業務】<br>
+                            ＊施設の入退居の手続き、入居促進、ベッドコントロール、入居時契約、退去時手続き、入退去時対応、家族との連絡調整<br>
+                            ＊入居者および家族に対する相談援助<br>
+                            ＊ケアマネジャー、地域、他機関との連絡・調整業務<br>
+                            ＊施設内における連絡・調整業務<br>
+                            ＊介護スタッフのサポート<br>
+                            ＊苦情などの初期対応・窓口業務等、その他付随する業務
+                          </p>
+                        </dd>
+                        <!-- 【3】訪問看護管理者 ↓ -->
+                        <dd>
+                          <a href="" class="menu__link js-menu__link">
+                            <p class="txt">【3】訪問看護管理者</p>
+                            <div class="i_box">
+                              <i class="one_i"></i>
+                            </div>
+                          </a>
+                          <p class="txt description">
+                            【新規開設有料老人ホームの訪問看護管理者業務】<br>
+                            定期巡回事業所と協働で看護業務に従事していただきます。<br>
+                            ＊利用者の管理（既往・現病歴の把握等）<br>
+                            ＊職員、スタッフの管理（面接、採用、育成、定期面談、労務管理、離職防止策対応等）<br>
+                            ＊運営管理（運営方針・理念に沿って提供、コンプライアンス等）<br>
+                            ＊記録、訪問看護計画書の管理（提供するケアの質、スタッフへの教育・研修参加等）<br>
+                            ＊多職種連携（ケアマネジャー、医療機関、利用者の利用するサービス機関への折衝等）<br>
+                            ＊収支管理（保険請求、各種経費管理、事業所の収支管理等）<br>
+                            ＊行政対応（介護・医療保険事業の届けや報告書、運営指導対応等）<br>
+                            ＊苦情などの対応・窓口業務等、その他付随する業務
+                            ＊その他訪問看護業務全般
+                          </p>
+                        </dd>
+                        <!-- 【4】看護師 ↓ -->
+                        <dd>
+                          <a href="" class="menu__link js-menu__link">
+                            <p class="txt">【4】看護師</p>
+                            <div class="i_box">
+                              <i class="one_i"></i>
+                            </div>
+                          </a>
+                          <p class="txt description">
+                            【新規開設有料老人ホームでの看護業務】<br>
+                            定期巡回事業所と協働で看護業務に従事していただきます。<br>
+                            ＊医師の指示による医療処置(インシュリン注射・点滴等の施行・血糖測定ほか)<br>
+                            ＊血圧・体温・脈拍などのバイタルチェック、健康管理<br>
+                            ＊医療機器の管理(経管栄養、在宅酸素、人工呼吸器、持続点滴、膀胱カテーテル)<br>
+                            ＊看取りや在宅療養上の医療的な指導<br>
+                            ＊日常生活に必要なリハビリ<br>
+                            ＊療養上必要な介助（保清、排泄、体交、その他必要な介助）<br>
+                            ＊介護スタッフとの連携<br>
+                            ＊褥瘡管理
+                          </p>
+                        </dd>
+                        <!-- 【5】介護職 ↓ -->
+                        <dd>
+                          <a href="" class="menu__link js-menu__link">
+                            <p class="txt">【5】介護職</p>
+                            <div class="i_box">
+                              <i class="one_i"></i>
+                            </div>
+                          </a>
+                          <p class="txt description">
+                            【新規開設有料老人ホームでの介護業務】<br>
+                            有料老人ホームおよび併設の定期巡回サービス事業所での介護業務に従事していただきます。<br>
+                            ＊利用者への身体介護、生活援助等（入浴、食事、着替え、排泄介助等介護ケアの提供等）<br>
+                            ＊多職種連携（ケアマネ、医療機関、利用者の利用するサービス機関への折衝等）<br>
+                            ＊レクリエーション、生活リハビリ等の業務
+                          </p>
+                        </dd>
+                      </div>
+                    </dl>
+                    <!-- 資格 ↓ -->
+                    <dl class="requirement__list__item -accordion">
+                      <div class="dtHolder">
+                        <dt>資格</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <!-- 【1】施設長 ↓ -->
+                        <dd>
+                          <a href="" class="menu__link js-menu__link">
+                            <p class="txt">【1】施設長</p>
+                            <div class="i_box">
+                              <i class="one_i"></i>
+                            </div>
+                          </a>
+                          <p class="txt description">
+                            介護福祉士、介護支援専門員、正看護師等資格保有者
+                            下記経験者尚可<br>
+                            ＊介護施設などでの管理者経験<br>
+                            ＊複数スタッフのマネジメント経験<br>
+                            ＊簡易的な収支の理解ができる<br>
+                            ＊介護保険請求業務経験がある<br>
+                          </p>
+                        </dd>
+                        <!-- 【2】生活相談員 ↓ -->
+                        <dd>
+                          <a href="" class="menu__link js-menu__link">
+                            <p class="txt">【2】生活相談員</p>
+                            <div class="i_box">
+                              <i class="one_i"></i>
+                            </div>
+                          </a>
+                          <p class="txt description">
+                            社会福祉士、介護支援専門員、介護福祉士等資格保有者<br>
+                            下記経験者尚可<br>
+                            ＊病院、介護施設、通所介護などで相談業務の経験<br>
+                            ＊入居・サービス利用など契約締結業務の経験
+                          </p>
+                        </dd>
+                        <!-- 【3】訪問看護管理者 ↓ -->
+                        <dd>
+                          <a href="" class="menu__link js-menu__link">
+                            <p class="txt">【3】訪問看護管理者</p>
+                            <div class="i_box">
+                              <i class="one_i"></i>
+                            </div>
+                          </a>
+                          <p class="txt description">
+                            正看護師資格保有者<br>
+                            下記経験者尚可<br>
+                            ＊訪問看護事業所の管理者経験<br>
+                            ＊看護スタッフに対してのマネジメント経験<br>
+                            ＊医療・介護費の請求業務の経験<br>
+                            ＊保険費用の仕組みを理解
+                          </p>
+                        </dd>
+                        <!-- 【4】看護師 ↓ -->
+                        <dd>
+                          <a href="" class="menu__link js-menu__link">
+                            <p class="txt">【4】看護師</p>
+                            <div class="i_box">
+                              <i class="one_i"></i>
+                            </div>
+                          </a>
+                          <p class="txt description">
+                            正看護師、准看護師資格保有者<br>
+                            下記経験者尚可<br>
+                            ＊訪問看護事業所での業務経験<br>
+                            ＊看護計画作成経験<br>
+                            ＊重度障がい者・難病の方などの対応経験<br>
+                            ＊急性期等での業務経験　
+                          </p>
+                        </dd>
+                        <!-- 【5】介護職 ↓ -->
+                        <dd>
+                          <a href="" class="menu__link js-menu__link">
+                            <p class="txt">【5】介護職</p>
+                            <div class="i_box">
+                              <i class="one_i"></i>
+                            </div>
+                          </a>
+                          <p class="txt description">
+                            介護福祉士、実務者研修及び初任者研修修了者<br>
+                            下記経験者尚可<br>
+                            ＊介護施設等複数のスタッフが関わる現場で働いた経験<br>
+                            ＊重度者介護の方に対応した経験<br>
+                            ＊看取りの経験<br>
+                            ＊介護計画書を作成した経験がある
+                          </p>
+                        </dd>
+                      </div>
+                    </dl>
+                    <!-- 給与 ↓ -->
+                    <dl class="requirement__list__item">
+                      <div class="dtHolder">
+                        <dt>給与</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <dd>
                           <p class="txt">【1】施設長</p>
-                          <div class="i_box">
-                            <i class="one_i"></i>
-                          </div>
-                        </a>
-                        <p class="txt description">
-                          【新規開設有料老人ホーム施設長業務】<br>
-                          ＊入居者の管理（既往・現病歴の把握、入居促進、ベッドコントロール、入居時契約、退去時手続き、入退去時対応、家族との連絡調整）<br>
-                          ＊職員、スタッフの管理（面接、採用、育成、定期面談、労務管理、離職防止策対応等）<br>
-                          ＊運営管理（運営方針・理念に沿って提供、コンプライアンス、広報・営業活動等）<br>
-                          ＊収支管理（利用料・保険請求、各種経費管理、施設全体の収支管理等）<br>
-                          ＊行政対応（介護保険事業の届けや報告書、運営指導対応、消防計画の作成や提出等）<br>
-                          ＊関係各所対応（関連事業者との連絡調整等）<br>
-                          ＊苦情などの対応・窓口業務等、その他付随する業務
-                        </p>
-                      </dd>
-                      <!-- 【2】生活相談員 ↓ -->
-                      <dd>
-                        <a href="" class="menu__link js-menu__link">
+                          <p class="txt salary">月給：336,700円～601,666円</p>
+                        </dd>
+                        <dd>
                           <p class="txt">【2】生活相談員</p>
-                          <div class="i_box">
-                            <i class="one_i"></i>
-                          </div>
-                        </a>
-                        <p class="txt description">
-                          【新規開設有料老人ホーム相談員業務】<br>
-                          ＊施設の入退居の手続き、入居促進、ベッドコントロール、入居時契約、退去時手続き、入退去時対応、家族との連絡調整<br>
-                          ＊入居者および家族に対する相談援助<br>
-                          ＊ケアマネジャー、地域、他機関との連絡・調整業務<br>
-                          ＊施設内における連絡・調整業務<br>
-                          ＊介護スタッフのサポート<br>
-                          ＊苦情などの初期対応・窓口業務等、その他付随する業務
-                        </p>
-                      </dd>
-                      <!-- 【3】訪問看護管理者 ↓ -->
-                      <dd>
-                        <a href="" class="menu__link js-menu__link">
+                          <p class="txt salary">月給：269,100円～476,666円</p>
+                        </dd>
+                        <dd>
                           <p class="txt">【3】訪問看護管理者</p>
-                          <div class="i_box">
-                            <i class="one_i"></i>
-                          </div>
-                        </a>
-                        <p class="txt description">
-                          【新規開設有料老人ホームの訪問看護管理者業務】<br>
-                          定期巡回事業所と協働で看護業務に従事していただきます。<br>
-                          ＊利用者の管理（既往・現病歴の把握等）<br>
-                          ＊職員、スタッフの管理（面接、採用、育成、定期面談、労務管理、離職防止策対応等）<br>
-                          ＊運営管理（運営方針・理念に沿って提供、コンプライアンス等）<br>
-                          ＊記録、訪問看護計画書の管理（提供するケアの質、スタッフへの教育・研修参加等）<br>
-                          ＊多職種連携（ケアマネジャー、医療機関、利用者の利用するサービス機関への折衝等）<br>
-                          ＊収支管理（保険請求、各種経費管理、事業所の収支管理等）<br>
-                          ＊行政対応（介護・医療保険事業の届けや報告書、運営指導対応等）<br>
-                          ＊苦情などの対応・窓口業務等、その他付随する業務
-                          ＊その他訪問看護業務全般
-                        </p>
-                      </dd>
-                      <!-- 【4】看護師 ↓ -->
-                      <dd>
-                        <a href="" class="menu__link js-menu__link">
-                          <p class="txt">【4】看護師</p>
-                          <div class="i_box">
-                            <i class="one_i"></i>
-                          </div>
-                        </a>
-                        <p class="txt description">
-                          【新規開設有料老人ホームでの看護業務】<br>
-                          定期巡回事業所と協働で看護業務に従事していただきます。<br>
-                          ＊医師の指示による医療処置(インシュリン注射・点滴等の施行・血糖測定ほか)<br>
-                          ＊血圧・体温・脈拍などのバイタルチェック、健康管理<br>
-                          ＊医療機器の管理(経管栄養、在宅酸素、人工呼吸器、持続点滴、膀胱カテーテル)<br>
-                          ＊看取りや在宅療養上の医療的な指導<br>
-                          ＊日常生活に必要なリハビリ<br>
-                          ＊療養上必要な介助（保清、排泄、体交、その他必要な介助）<br>
-                          ＊介護スタッフとの連携<br>
-                          ＊褥瘡管理
-                        </p>
-                      </dd>
-                      <!-- 【5】介護職 ↓ -->
-                      <dd>
-                        <a href="" class="menu__link js-menu__link">
+                          <p class="txt salary">月給：336,700円～585,100円</p>
+                        </dd>
+                        <dd>
+                          <p class="txt">【4】看護職</p>
+                          <p class="txt">□正看護師</p>
+                          <p class="txt salary">月給：286,500円～451,666円　<br class="u-spOnly">※別途処遇改善加算あり</p>
+                          <p class="txt">□准看護師</p>
+                          <p class="txt salary">月給：259,800円～326,666円　<br class="u-spOnly">※別途処遇改善加算あり</p>
+                        </dd>
+                        <dd>
                           <p class="txt">【5】介護職</p>
-                          <div class="i_box">
-                            <i class="one_i"></i>
-                          </div>
-                        </a>
-                        <p class="txt description">
-                          【新規開設有料老人ホームでの介護業務】<br>
-                          有料老人ホームおよび併設の定期巡回サービス事業所での介護業務に従事していただきます。<br>
-                          ＊利用者への身体介護、生活援助等（入浴、食事、着替え、排泄介助等介護ケアの提供等）<br>
-                          ＊多職種連携（ケアマネ、医療機関、利用者の利用するサービス機関への折衝等）<br>
-                          ＊レクリエーション、生活リハビリ等の業務
-                        </p>
-                      </dd>
-                    </div>
-                  </dl>
-                  <!-- 資格 ↓ -->
-                  <dl class="requirement__list__item -accordion">
-                    <div class="dtHolder">
-                      <dt>資格</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <!-- 【1】施設長 ↓ -->
-                      <dd>
-                        <a href="" class="menu__link js-menu__link">
-                          <p class="txt">【1】施設長</p>
-                          <div class="i_box">
-                            <i class="one_i"></i>
-                          </div>
-                        </a>
-                        <p class="txt description">
-                          介護福祉士、介護支援専門員、正看護師等資格保有者
-                          下記経験者尚可<br>
-                          ＊介護施設などでの管理者経験<br>
-                          ＊複数スタッフのマネジメント経験<br>
-                          ＊簡易的な収支の理解ができる<br>
-                          ＊介護保険請求業務経験がある<br>
-                        </p>
-                      </dd>
-                      <!-- 【2】生活相談員 ↓ -->
-                      <dd>
-                        <a href="" class="menu__link js-menu__link">
-                          <p class="txt">【2】生活相談員</p>
-                          <div class="i_box">
-                            <i class="one_i"></i>
-                          </div>
-                        </a>
-                        <p class="txt description">
-                          社会福祉士、介護支援専門員、介護福祉士等資格保有者<br>
-                          下記経験者尚可<br>
-                          ＊病院、介護施設、通所介護などで相談業務の経験<br>
-                          ＊入居・サービス利用など契約締結業務の経験
-                        </p>
-                      </dd>
-                      <!-- 【3】訪問看護管理者 ↓ -->
-                      <dd>
-                        <a href="" class="menu__link js-menu__link">
-                          <p class="txt">【3】訪問看護管理者</p>
-                          <div class="i_box">
-                            <i class="one_i"></i>
-                          </div>
-                        </a>
-                        <p class="txt description">
-                          正看護師資格保有者<br>
-                          下記経験者尚可<br>
-                          ＊訪問看護事業所の管理者経験<br>
-                          ＊看護スタッフに対してのマネジメント経験<br>
-                          ＊医療・介護費の請求業務の経験<br>
-                          ＊保険費用の仕組みを理解
-                        </p>
-                      </dd>
-                      <!-- 【4】看護師 ↓ -->
-                      <dd>
-                        <a href="" class="menu__link js-menu__link">
-                          <p class="txt">【4】看護師</p>
-                          <div class="i_box">
-                            <i class="one_i"></i>
-                          </div>
-                        </a>
-                        <p class="txt description">
-                          正看護師、准看護師資格保有者<br>
-                          下記経験者尚可<br>
-                          ＊訪問看護事業所での業務経験<br>
-                          ＊看護計画作成経験<br>
-                          ＊重度障がい者・難病の方などの対応経験<br>
-                          ＊急性期等での業務経験　
-                        </p>
-                      </dd>
-                      <!-- 【5】介護職 ↓ -->
-                      <dd>
-                        <a href="" class="menu__link js-menu__link">
-                          <p class="txt">【5】介護職</p>
-                          <div class="i_box">
-                            <i class="one_i"></i>
-                          </div>
-                        </a>
-                        <p class="txt description">
-                          介護福祉士、実務者研修及び初任者研修修了者<br>
-                          下記経験者尚可<br>
-                          ＊介護施設等複数のスタッフが関わる現場で働いた経験<br>
-                          ＊重度者介護の方に対応した経験<br>
-                          ＊看取りの経験<br>
-                          ＊介護計画書を作成した経験がある
-                        </p>
-                      </dd>
-                    </div>
-                  </dl>
-                  <!-- 給与 ↓ -->
-                  <dl class="requirement__list__item">
-                    <div class="dtHolder">
-                      <dt>給与</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <dd>
-                        <p class="txt">【1】施設長</p>
-                        <p class="txt salary">月給：336,700円～601,666円</p>
-                      </dd>
-                      <dd>
-                        <p class="txt">【2】生活相談員</p>
-                        <p class="txt salary">月給：269,100円～476,666円</p>
-                      </dd>
-                      <dd>
-                        <p class="txt">【3】訪問看護管理者</p>
-                        <p class="txt salary">月給：336,700円～585,100円</p>
-                      </dd>
-                      <dd>
-                        <p class="txt">【4】看護職</p>
-                        <p class="txt">□正看護師</p>
-                        <p class="txt salary">月給：286,500円～451,666円　※別途処遇改善加算あり</p>
-                        <p class="txt">□准看護師</p>
-                        <p class="txt salary">月給：259,800円～326,666円　※別途処遇改善加算あり</p>
-                      </dd>
-                      <dd>
-                        <p class="txt">【5】介護職</p>
-                        <p class="txt">□介護福祉士</p>
-                        <p class="txt salary">月給：216,700円～351,666円　※別途処遇改善加算あり</p>
-                        <p class="txt">□実務者研修修了者</p>
-                        <p class="txt salary">月給：216,700円～310,000円　※別途処遇改善加算あり</p>
-                        <p class="txt">□初任者研修修了者</p>
-                        <p class="txt salary">月給：176,666円～226,666円　※別途処遇改善加算あり</p>
-                      </dd>
-                      <dd class="annotation">
-                        <p class="txt">
-                          ※給与金額については経験に応じて決定する<br>
-                          ※試用期間3ヶ月あり（条件同一）
-                        </p>
-                      </dd>
-                    </div>
-                  </dl>
-                  <!-- その他の募集職種 ↓ -->
-                  <dl class="requirement__list__item">
-                    <div class="dtHolder">
-                      <dt>その他の募集職種</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <dd>
-                        調理員　受付事務
-                      </dd>
-                    </div>
-                  </dl>
-                  <!-- 時間 ↓ -->
-                  <dl class="requirement__list__item">
-                    <div class="dtHolder">
-                      <dt>時間</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <dd>
-                        9:00～18:00　休憩60分<br>
-                        月間平均勤務時間を165時間　※1か月単位の変形労働時間制<br>
-                        ※施設開設前のため変動の可能性あり
-                      </dd>
-                    </div>
-                  </dl>
-                  <!-- 休日 ↓ -->
-                  <dl class="requirement__list__item">
-                    <div class="dtHolder">
-                      <dt>休日</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <dd>
-                        日祝他※年間休日117日（月9～10日程度　シフト制）<br>
-                        有給休暇（入社半年後10日付与）、年末年始（12/29～1/3）、バースデー休暇
-                      </dd>
-                    </div>
-                  </dl>
-                  <!-- 待遇 ↓ -->
-                  <dl class="requirement__list__item">
-                    <div class="dtHolder">
-                      <dt>待遇</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <dd>
-                        昇給あり（年1回）、賞与あり（年1回）、退職金あり（勤続3年以上、確定拠出年金）、交通費支給あり（上限月5万）、各種社会保険完備、車通勤可、駐車場有、受動喫煙対策あり（屋内禁煙）、ミルククラブ（幼児教育無償化対象外の未就学児）、勤務形態変更希望制度、育休後復帰手当、産前産後・育児・介護休暇等各種休暇あり、各種研修（新人OJT、管理者研修、中堅社員研修等）
-                      </dd>
-                    </div>
-                  </dl>
-                  <!-- 勤務地 ↓ -->
-                  <dl class="requirement__list__item">
-                    <div class="dtHolder">
-                      <dt>勤務地</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <dd>
-                        福岡県春日市ちくし台5丁目
-                      </dd>
-                    </div>
-                  </dl>
-                  <!-- 事業内容 ↓ -->
-                  <dl class="requirement__list__item">
-                    <div class="dtHolder">
-                      <dt>事業内容</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <dd>
-                        新規開設有料老人ホーム併設の定期巡回・随時対応型訪問介護看護事業所の運営<br>
-                        【東証グロース上場】
-                      </dd>
-                    </div>
-                  </dl>
-                  <!-- 応募 ↓ -->
-                  <dl class="requirement__list__item">
-                    <div class="dtHolder">
-                      <dt>応募</dt>
-                    </div>
-                    <div class="ddHolder">
-                      <dd>
-                        「応募する」ボタンをご利用ください。こちらより折り返しご連絡いたします。<br>
-                        電話でのご応募もお待ちしております。<br>
-                        <br>
-                        ○連絡先住所<br>
-                        〒816-0802　福岡県春日市春日原北町2-2-1<br>
-                        ○連絡先TEL<br>
-                        092-558-2120<br>
-                        担当：田辺
-                      </dd>
-                    </div>
-                  </dl>
+                          <p class="txt">□介護福祉士</p>
+                          <p class="txt salary">月給：216,700円～351,666円　<br class="u-spOnly">※別途処遇改善加算あり</p>
+                          <p class="txt">□実務者研修修了者</p>
+                          <p class="txt salary">月給：216,700円～310,000円　<br class="u-spOnly">※別途処遇改善加算あり</p>
+                          <p class="txt">□初任者研修修了者</p>
+                          <p class="txt salary">月給：176,666円～226,666円　<br class="u-spOnly">※別途処遇改善加算あり</p>
+                        </dd>
+                        <dd class="annotation">
+                          <p class="txt">
+                            ※給与金額については経験に応じて決定する<br>
+                            ※試用期間3ヶ月あり（条件同一）
+                          </p>
+                        </dd>
+                      </div>
+                    </dl>
+                    <!-- その他の募集職種 ↓ -->
+                    <dl class="requirement__list__item">
+                      <div class="dtHolder">
+                        <dt>その他の募集職種</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <dd>
+                          調理員　受付事務
+                        </dd>
+                      </div>
+                    </dl>
+                    <!-- 時間 ↓ -->
+                    <dl class="requirement__list__item">
+                      <div class="dtHolder">
+                        <dt>時間</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <dd>
+                          9:00～18:00　休憩60分<br>
+                          月間平均勤務時間を165時間　<br class="u-spOnly">※1か月単位の変形労働時間制<br>
+                          ※施設開設前のため変動の可能性あり
+                        </dd>
+                      </div>
+                    </dl>
+                    <!-- 休日 ↓ -->
+                    <dl class="requirement__list__item">
+                      <div class="dtHolder">
+                        <dt>休日</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <dd>
+                          日祝他　<br class="u-spOnly">※年間休日117日（月9～10日程度　シフト制）<br>
+                          有給休暇（入社半年後10日付与）、年末年始（12/29～1/3）、バースデー休暇
+                        </dd>
+                      </div>
+                    </dl>
+                    <!-- 待遇 ↓ -->
+                    <dl class="requirement__list__item">
+                      <div class="dtHolder">
+                        <dt>待遇</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <dd>
+                          昇給あり（年1回）、賞与あり（年1回）、退職金あり（勤続3年以上、確定拠出年金）、交通費支給あり（上限月5万）、各種社会保険完備、車通勤可、駐車場有、受動喫煙対策あり（屋内禁煙）、ミルククラブ（幼児教育無償化対象外の未就学児）、勤務形態変更希望制度、育休後復帰手当、産前産後・育児・介護休暇等各種休暇あり、各種研修（新人OJT、管理者研修、中堅社員研修等）
+                        </dd>
+                      </div>
+                    </dl>
+                    <!-- 勤務地 ↓ -->
+                    <dl class="requirement__list__item">
+                      <div class="dtHolder">
+                        <dt>勤務地</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <dd>
+                          福岡県春日市ちくし台5丁目
+                        </dd>
+                      </div>
+                    </dl>
+                    <!-- 事業内容 ↓ -->
+                    <dl class="requirement__list__item">
+                      <div class="dtHolder">
+                        <dt>事業内容</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <dd>
+                          新規開設有料老人ホーム併設の定期巡回・随時対応型訪問介護看護事業所の運営<br>
+                          【東証グロース上場】
+                        </dd>
+                      </div>
+                    </dl>
+                    <!-- 応募 ↓ -->
+                    <dl class="requirement__list__item">
+                      <div class="dtHolder">
+                        <dt>応募</dt>
+                      </div>
+                      <div class="ddHolder">
+                        <dd>
+                          「応募する」ボタンをご利用ください。こちらより折り返しご連絡いたします。<br>
+                          電話でのご応募もお待ちしております。<br>
+                          <br>
+                          ○連絡先住所<br>
+                          〒816-0802　福岡県春日市春日原北町2-2-1<br>
+                          ○連絡先TEL<br>
+                          092-558-2120<br>
+                          担当：田辺
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
                 </div>
               </div>
             </div>

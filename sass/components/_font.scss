@@ -10,4 +10,7 @@
   text-shadow: 4px 4px 0px #ccff99;
   font-size: 7.8rem;
   line-height: 1;
+  @include mq-down(md) {
+    font-size: 5.6rem;
+  }
 }

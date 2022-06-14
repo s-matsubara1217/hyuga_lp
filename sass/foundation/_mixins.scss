@@ -51,3 +51,18 @@
 		right: 0;
 	}
 }
+
+// Hover
+@mixin hover {
+  @media (hover: hover) and (pointer: fine)  {
+    &:hover {
+      @content;
+    }
+  }
+  // for IE11
+  @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    &:hover {
+      @content;
+    }
+  }
+}

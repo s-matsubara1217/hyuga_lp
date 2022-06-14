@@ -161,11 +161,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
+
+  @include hover {
+    box-shadow: none;
+    transform: translate(5px,5px);
+  }
 
   .txt {
     color: $primary-color;
     font-size: 1.8rem;
     font-weight: bold;
     line-height: 1.8;
+    transition: all 0.3s;
   }
 }
