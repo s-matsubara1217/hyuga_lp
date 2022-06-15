@@ -9,10 +9,11 @@
   background-color: #fff;
   border: 1px solid $primary-color;
   transform: skewX(-20deg);
-  box-shadow: 10px 10px 0px 0px #e5ffcb;
+  box-shadow: 10px 10px 0px 0px rgba(#ccff99,50%);
   position: relative;
   @include mq-down(md) {
     padding: 18px 28px;
+    box-shadow: 8px 8px 0px 0px rgba(#ccff99,50%);
   }
 
   &:before {

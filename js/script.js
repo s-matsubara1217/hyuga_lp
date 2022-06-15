@@ -217,3 +217,54 @@ $(function(){
     $(this).find('dd:first .menu__link').addClass('open');
   })
 });
+
+/*----------------------------------------------------
+		ページトップ フッター上で止める処理
+	-----------------------------------------------------*/
+  function pagetopStop() {
+    var documentHeight = $(document).height();
+    var scrollPosition = $(this).height() + $(this).scrollTop();
+    var footerHeight = $("footer").innerHeight();
+
+    // スマホ表示の時の処理
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      if (documentHeight - scrollPosition <= footerHeight) {
+        $(".pagetop").css({
+          position: "absolute",
+          bottom: footerHeight - 36
+        });
+      } else {
+        $(".pagetop").css({
+          position: "fixed",
+          bottom: 96
+        })
+      }
+    }
+
+  }
+  $(window).scroll(function () {
+    pagetopStop();
+  })
+
+
+/*----------------------------------------------------
+  スムーススクロール
+-----------------------------------------------------*/
+$(function(){
+  // #で始まるリンクをクリックした場合
+  $('a[href^="#"]').click(function() {
+    // スクロールの速度
+    let speed = 600;
+    // スクロールタイプ
+    let type = 'swing';
+    // href属性の取得
+    let href= $(this).attr("href");
+    // 移動先の取得（hrefが#indexならトップ$(html)に、）
+    let target = $(href == "#index" ? 'html' : href);
+    // 移動先のポジション取得
+    let position = target.offset().top;
+    // animateでスムーススクロール
+    $('body,html').animate({scrollTop:position}, speed, type);
+    return false;
+  });
+});

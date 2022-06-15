@@ -14,6 +14,24 @@
       );
     }
   }
+  &.-fadeInScaleIn {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.6s, transform 0.6s;
+    transition-timing-function: ease-in-out;
+
+    &.-delay01 {
+      transition-delay: 0.3s;
+    }
+    &.-delay02 {
+      transition-delay: 0.6s;
+    }
+
+    &.js-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
   &.-slideIn-b-40 {
     opacity: 0;
     &.js-active {
@@ -298,7 +316,6 @@
 }
 
 // 固有アニメーション
-
 @include keyframes(waveY-20) {
   0% {
     transform: translateY(0);
@@ -332,5 +349,65 @@
   }
   100% {
       transform: scale(1.05);
+  }
+}
+
+// ファーストビューアニメーション
+.fvanime {
+  &.-fadeInScaleIn {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.6s, transform 0.6s;
+    transition-timing-function: ease-in-out;
+
+    &.-delay {
+      transition-delay: 0.3s;
+    }
+  }
+  &.-slideIn-r-40 {
+    opacity: 0;
+  }
+  &.-slideIn-b-40 {
+    opacity: 0;
+  }
+}
+.page-loaded {
+  .fvanime {
+    &.-fadeInScaleIn {
+      opacity: 1;
+      transform: scale(1);
+    }
+    &.-slideIn-r-40 {
+      @include animation(
+        fadein-r-40 800ms $bezier-easeOutSine 700ms
+      );
+    }
+    &.-slideIn-b-40 {
+      @include animation(
+        fadein-b-40 500ms $bezier-easeOutSine 1000ms
+      );
+    }
+  }
+}
+
+.mv__text {
+  &.fvanime {
+    &.-fadeInScaleIn {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+      transition: opacity 0.6s, transform 0.6s;
+      transition-timing-function: ease-in-out;
+      transition-delay: 1s;
+    }
+  }
+}
+.page-loaded {
+  .mv__text {
+    &.fvanime {
+      &.-fadeInScaleIn {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
   }
 }

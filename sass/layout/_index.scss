@@ -8,12 +8,15 @@
 //======================================*/
 
 .lp {
+  position: relative;
 
+  // ベース背景
   #container {
     background-image: url(../img/index/bg_white.png);
     background-repeat: repeat;
   }
 
+  // ヘッダー
   .header {
     padding-top: 56px;
     position: relative;
@@ -46,7 +49,7 @@
       max-width: 813px;
       margin: 0 auto;
       position: relative;
-      z-index: 2;
+      z-index: 3;
       @include mq-down(md) {
         display: block;
         margin-top: -4px;
@@ -66,6 +69,42 @@
       @include mq-down(md) {
         max-width: 318px;
         margin-top: 12px;
+      }
+    }
+    &__decoHolder {
+      .deco {
+        position: absolute;
+        z-index: 2;
+
+        &__circle01 {
+          max-width: 204px;
+          width: 13.6%;
+          top: -8px;
+          left: 4%;
+          @include mq-down(md) {
+            width: 18.6%;
+            top: 134px;
+          }
+        }
+        &__circle02 {
+          max-width: 123px;
+          width: 8.2%;
+          top: 60px;
+          right: -1.6%;
+          @include mq-down(md) {
+            width: 13.2%;
+            top: 100px;
+          }
+        }
+        &__triangle01 {
+          max-width: 65px;
+          width: 4.4%;
+          top: -12px;
+          right: 10%;
+          @include mq-down(md) {
+            width: 6.4%;
+          }
+        }
       }
     }
 
@@ -88,119 +127,153 @@
     }
   }
 
-  .main {
-
-    // メインビジュアル
-    .mv  {
-      display: flex;
-      justify-content: flex-start;
-      align-items: stretch;
-      position: relative;
-      margin-top: 50px;
-      position: relative;
-      padding-top: 100px;
+  // メインビジュアル
+  .mv  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+    margin-top: 50px;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 64px;
+    @include mq-down(md) {
+      margin-top: 24px;
+      display: block;
+      padding-top: 90px;
       padding-bottom: 64px;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/index/bg_yellowgreen.png);
+      background-repeat: repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: skewY(-6.4deg);
+      pointer-events: none;
+    }
+
+    &__text {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 52.4%;
+      max-width: 608px;
+      z-index: 3;
       @include mq-down(md) {
-        margin-top: 24px;
-        display: block;
-        padding-top: 90px;
-        padding-bottom: 64px;
+        width: 304px;
       }
 
-      &:before {
-        content: '';
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        background-image: url(../img/index/bg_yellowgreen.png);
-        background-repeat: repeat;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transform: skewY(-6.4deg);
-        pointer-events: none;
-        @include mq-down(md) {
-          transform: skewY(0);
-        }
+      .img {
+
       }
-
-      &__text {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        width: 52.4%;
-        max-width: 608px;
-        @include mq-down(md) {
-          width: 304px;
-        }
-
-        .img {
-
-        }
-      }
-      &__logo {
-        flex: 0 0 23%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: relative;
+    }
+    &__logo {
+      flex: 0 0 23%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
 
 
-        .img {
-          &__shape {
+      .img {
+        &__shape {
+          @include mq-up(md) {
             width: 61.4%;
             max-width: 212px;
           }
-          &__text {
+        }
+        &__text {
+          @include mq-up(md) {
             width: 20%;
             max-width: 69px;
             margin: 24px auto 0;
           }
         }
       }
-      &__image {
-        flex: 0 0 77%;
-        position: relative;
-        @include mq-down(md) {
-          padding-top: 20px;
-          display: flex;
-          justify-content: flex-start;
-          align-items: flex-start;
-        }
-
-        > .img {
-          @include mq-down(md) {
-            height: 180px;
-          }
-          img {
-            max-height: 510px;
-          }
-        }
+    }
+    &__image {
+      flex: 0 0 77%;
+      position: relative;
+      @include mq-down(md) {
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        z-index: 2;
       }
-      &__budge {
-        position: absolute;
-        bottom: -92px;
-        right: 10%;
-        max-width: 185px;
-        width: 13%;
-        @include mq-down(xl) {
-          bottom: -64px;
-        }
+
+      > .img {
         @include mq-down(md) {
-          width: 27%;
-          bottom: -24px;
-          right: 6%;
+          height: 180px;
         }
-
-        .img {
-
+        img {
+          max-height: 510px;
         }
       }
     }
+    &__budge {
+      position: absolute;
+      bottom: -72px;
+      right: 10%;
+      max-width: 185px;
+      width: 13%;
+      @include mq-down(xl) {
+        bottom: -64px;
+      }
+      @include mq-down(md) {
+        width: 27%;
+        bottom: -24px;
+        right: 6%;
+        z-index: 3;
+      }
+
+      .img {
+
+      }
+    }
+    &__decoHolder {
+      .deco {
+        position: absolute;
+
+        &__triangle01 {
+          max-width: 58px;
+          width: 3.9%;
+          top: 64px;
+          left: 2.7%;
+          @include mq-down(md) {
+            width: 5.9%;
+            top: 90px;
+            z-index: 3;
+          }
+        }
+        &__triangle02 {
+          max-width: 50px;
+          width: 3.4%;
+          bottom: 28px;
+          right: 2.8%;
+          @include mq-down(md) {
+            width: 5.4%;
+            bottom: 48px;
+            z-index: 3;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // コンテンツ
+  .main {
 
     .sec__text {
       .text {
@@ -290,6 +363,7 @@
             margin-top: 20px;
             @include mq-down(md) {
                 font-size: 1.5rem;
+                margin-top: 16px;
             }
           }
         }
@@ -302,6 +376,8 @@
         }
 
         .text {
+          position: relative;
+
           &__body {
             position: relative;
             margin-top: 0;
@@ -328,9 +404,6 @@
               bottom: 0;
               transform: skewY(-6.4deg);
               pointer-events: none;
-              @include mq-down(md) {
-                transform: skewY(0);
-              }
             }
 
             .lead,
@@ -391,11 +464,32 @@
               }
             }
           }
+          &__decoHolder {
+            .deco {
+              position: absolute;
+
+              &__circle01 {
+                width: 7.74%;
+                max-width: 116px;
+                top: -160px;
+                left: 2.4%;
+                @include mq-down(md) {
+                  width: 14.74%;
+                  top: -120px;
+                  left: 28%;
+                }
+              }
+            }
+          }
         }
       }
       &02 {
         position: relative;
         padding-bottom: 220px;
+        @include mq-down(md) {
+          padding-bottom: 160px;
+        }
+
         &:before {
           content: '';
           display: inline-block;
@@ -412,15 +506,48 @@
           pointer-events: none;
         }
 
-        .text__body {
-          width: 80%;
-          max-width: 950px;
-          margin-top: 120px;
-          @include mq-down(xl) {
-            width: 100%;
+        .text {
+          &__inner {
+            position: relative;
+            z-index: 2;
           }
-          @include mq-down(md) {
-            margin-top: 56px;
+          &__body {
+            width: 80%;
+            max-width: 950px;
+            margin-top: 120px;
+            @include mq-down(xl) {
+              width: 100%;
+            }
+            @include mq-down(md) {
+              margin-top: 56px;
+            }
+          }
+          &__decoHolder {
+            .deco {
+              position: absolute;
+
+              &__circle01 {
+                max-width: 148px;
+                width: 9.9%;
+                top: -44px;
+                left: 7.5%;
+                @include mq-down(md) {
+                  width: 15.9%;
+                  top: -52px;
+                  left: -3.5%;
+                }
+              }
+              &__circle02 {
+                max-width: 217px;
+                width: 14.5%;
+                top: 8px;
+                right: -1.6%;
+                @include mq-down(md) {
+                  width: 19.5%;
+                  top: 96px;
+                }
+              }
+            }
           }
         }
       }
@@ -434,6 +561,8 @@
       }
 
       .jobs {
+        position: relative;
+
         &__inner {
           max-width: 1180px;
         }
@@ -473,6 +602,9 @@
           justify-content: flex-start;
           align-items: flex-start;
           flex-wrap: wrap;
+          position: relative;
+          z-index: 2;
+
           @include mq-down(md) {
             display: block;
           }
@@ -480,9 +612,14 @@
           &__item {
             flex: 0 0 50%;
             position: relative;
+            @include mq-up(md) {
+              &:nth-child(even) {
+                animation-delay: 300ms;
+              }
+            }
             @include mq-down(md) {
-              margin-top: 56px;
-              &*:first-child {
+              margin-top: 48px;
+              &:first-child {
                 margin-top: 0;
               }
             }
@@ -614,6 +751,98 @@
             }
           }
         }
+        &__decoHolder {
+          .deco {
+            position: absolute;
+
+            &__dot01 {
+              max-width: 104px;
+              width: 7%;
+              top: 320px;
+              right: 4.2%;
+              @include mq-down(md) {
+                width: 10%;
+                top: 32px;
+              }
+            }
+            &__dot02 {
+              max-width: 73px;
+              width: 4.9%;
+              top: 440px;
+              right: 12.1%;
+              @include mq-down(md) {
+                width: 7.9%;
+                top: 84px;
+                right: 15.1%;
+              }
+            }
+            &__dot03 {
+              max-width: 40px;
+              width: 2.7%;
+              top: 500px;
+              right: 4.8%;
+              @include mq-down(md) {
+                width: 5.7%;
+                top: 110px;
+              }
+            }
+            &__dot04 {
+              max-width: 104px;
+              width: 7%;
+              bottom: 248px;
+              left: 2.7%;
+              @include mq-down(md) {
+                width: 11%;
+                bottom: 342px;
+                left: 9.7%;
+              }
+            }
+            &__dot05 {
+              max-width: 73px;
+              width: 4.9%;
+              bottom: 180px;
+              left: -3.2%;
+              @include mq-down(md) {
+                width: 7.9%;
+                bottom: 318px;
+                left: -4.8%;
+              }
+            }
+            &__dot06 {
+              max-width: 40px;
+              width: 2.7%;
+              bottom: 135px;
+              left: 4%;
+              @include mq-down(md) {
+                width: 5.7%;
+                bottom: 286px;
+                left: 11%;
+              }
+            }
+            &__dot07 {
+              max-width: 51px;
+              width: 3.4%;
+              bottom: 244px;
+              right: 10.6%;
+              @include mq-down(md) {
+                width: 6.4%;
+                right: 4.6%;
+                bottom: 70px;
+              }
+            }
+            &__dot08 {
+              max-width: 144px;
+              width: 9.6%;
+              bottom: 118px;
+              right: -1.5%;
+              @include mq-down(md) {
+                width: 12.6%;
+                bottom: -24px;
+                right: -5.5%;
+              }
+            }
+          }
+        }
 
         .otherJobs {
           background-color: $lightblue;
@@ -623,8 +852,8 @@
           max-width: 420px;
           padding: 28px 0 36px;
           @include mq-down(md) {
-            width: 100%;
-            margin-top: 48px;
+            width: 90%;
+            margin: 48px auto 0;
           }
 
           &__head {
@@ -956,9 +1185,12 @@
       margin-top: -60px;
 
       .info{
+        position: relative;
+
         &__inner {
           max-width: 1180px;
           position: relative;
+          z-index: 2;
         }
         &__head {
           text-align: center;
@@ -973,6 +1205,29 @@
           color: #fff;
           padding: 76px 6.8% 64px;
           border-radius: 20px;
+          position: relative;
+          @include mq-down(md) {
+            padding: 48px 8% 56px;
+          }
+
+          &:before {
+            content: "";
+            box-sizing: border-box;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border: 2px dotted #fff;
+            border-radius: 20px;
+            pointer-events: none;
+            @include mq-down(md) {
+              width: calc(100% - 16px);
+              height: calc(100% - 16px);
+              top: 8px;
+              left: 8px;
+            }
+          }
         }
 
         &__list {
@@ -980,6 +1235,9 @@
           justify-content: flex-start;
           align-items: stretch;
           flex-wrap: wrap;
+          @include mq-down(md) {
+            display: block;
+          }
 
           &__item {
             flex: 0 0 46.8%;
@@ -990,6 +1248,11 @@
             align-items: flex-start;
             padding: 20px 0;
             position: relative;
+            @include mq-down(md) {
+              display: block;
+              padding: 16px 0;
+              margin-right: 0;
+            }
 
             &:nth-child(even) {
               margin-right: 0;
@@ -1047,12 +1310,45 @@
         &__illustHolder {
           position: absolute;
           bottom: -32%;
-          right: -20px;
+          right: -72px;
           width: 15.5%;
           max-width: 170px;
           @include mq-down(xl) {
             width: 12.6%;
             right: 24px;
+          }
+          @include mq-down(md) {
+            width: 20%;
+            bottom: 0;
+            transform: translateY(60%);
+          }
+        }
+        &__decoHolder {
+          .deco {
+            position: absolute;
+
+            &__circle01 {
+              max-width: 251px;
+              width: 16.8%;
+              top: 0;
+              left: 4.8%;
+              @include mq-down(md) {
+                width: 21.8%;
+                left: 0;
+                top: -54px;
+              }
+            }
+            &__circle02 {
+              max-width: 148px;
+              width: 9.4%;
+              top: 0;
+              right: 8%;
+              @include mq-down(md) {
+                width: 14.4%;
+                top: -88px;
+                right: 0;
+              }
+            }
           }
         }
       }
@@ -1060,8 +1356,12 @@
 
   }
 
+  // フッター
   .footer {
     margin-top: 180px;
+    @include mq-down(md) {
+      margin-top: 156px;
+    }
 
     &__access {
       position: relative;
@@ -1072,6 +1372,10 @@
         left: 50%;
         transform: translate(-50%,-72%);
         z-index: 2;
+        @include mq-down(md) {
+            transform: translate(0,-60%);
+            left: 5%;
+        }
 
         .txt {
 
@@ -1082,6 +1386,10 @@
         justify-content: flex-start;
         align-items: stretch;
         max-height: 500px;
+        @include mq-down(md) {
+            flex-direction: column-reverse;
+            max-height: none;
+        }
       }
       &__inner {
         max-width: 420px;
@@ -1093,6 +1401,9 @@
         padding-bottom: 34.4%;
         position: relative;
         max-height: 500px;
+        @include mq-down(md) {
+          padding-bottom: 60%;
+        }
 
         iframe {
           position: absolute;
@@ -1112,6 +1423,23 @@
         padding: 40px 5%;
         background-image: url(../img/index/bg_lightblue.png);
         background-repeat: repeat;
+      }
+      &__decoHolder {
+        .deco {
+          position: absolute;
+
+          &__triangle01 {
+            max-width: 66px;
+            width: 4.4%;
+            top: -32px;
+            right: 27.8%;
+            @include mq-down(md) {
+              width: 7.4%;
+              top: -18px;
+              right: 23.8%;
+            }
+          }
+        }
       }
 
       &__facilityName {
@@ -1137,10 +1465,16 @@
       }
       &__list {
         margin-top: 28px;
+        @include mq-down(md) {
+            margin-top: 24px;
+        }
 
         &__item {
           font-weight: 400;
           margin-top: 20px;
+          @include mq-down(md) {
+            margin-top: 12px;
+          }
 
           &:first-child {
             margin-top: 0;
@@ -1150,9 +1484,16 @@
             color: $primary-color;
             display: inline-block;
             border-bottom: 1px solid $primary-color;
+            @include mq-down(md) {
+              font-size: 1.5rem;
+            }
           }
           dd {
             margin-top: 10px;
+            @include mq-down(md) {
+              margin-top: 8px;
+              font-size: 1.5rem;
+            }
           }
         }
       }
@@ -1161,6 +1502,10 @@
       background-color: $navy;
       color: #fff;
       padding: 90px 0 calc(90px + 110px);
+      position: relative;
+      @include mq-down(md) {
+        padding: 56px 0 calc(64px + 86px);
+      }
 
       a {
         color: #fff;
@@ -1170,11 +1515,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include mq-down(md) {
+          flex-wrap: wrap;
+        }
       }
 
       &__logoHolder {
         flex: 0 0 24.2%;
         max-width: 290px;
+        @include mq-down(md) {
+          flex: 0 0 145px;
+        }
 
         .img {
 
@@ -1189,12 +1540,19 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @include mq-down(md) {
+          width: 172px;
+          height: 80px;
+        }
 
 
         .txt {
           font-size: 1.2rem;
           font-weight: 400;
           margin-bottom: 12px;
+          @include mq-down(md) {
+            margin-bottom: 8px;
+          }
         }
         .sns {
           display: flex;
@@ -1248,6 +1606,28 @@
         flex-direction: column;
         align-items: flex-end;
         font-weight: 400;
+        @include mq-down(md) {
+          width: 100%;
+          margin-top: 32px;
+          align-items: center;
+        }
+      }
+      &__decoHolder {
+        .deco {
+          position: absolute;
+
+          &__triangle02 {
+            max-width: 65px;
+            width: 4.3%;
+            top: -32px;
+            right: 3.2%;
+            @include mq-down(md) {
+              width: 7.3%;
+              top: -245px;
+              right: 4.2%;
+            }
+          }
+        }
       }
 
       &__hpLink {
@@ -1273,16 +1653,21 @@
       &__cr {
         font-size: 1.2rem;
         margin-top: 24px;
+        @include mq-down(md) {
+          margin-top: 16px;
+        }
       }
       &__ga {
         font-size: 1.2rem;
         margin-top: 24px;
+        @include mq-down(md) {
+          margin-top: 16px;
+        }
       }
     }
-
-
   }
 
+  // 固定ボタン
   .floatingBox {
     background-color: rgba($primary-color,80%);
     padding: 20px 0 24px;
@@ -1293,11 +1678,18 @@
     z-index: 100;
     transform: translateY(100%);
     transition: transform 0.4s;
+    @include mq-down(md) {
+      padding: 12px 0 16px;
+    }
 
     &__inner {
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
+      @include mq-down(md) {
+        padding: 0 10px;
+      }
     }
 
     &__txtHolder {
@@ -1307,6 +1699,9 @@
       .txt {
         font-size: 1.4rem;
         font-weight: 400;
+        @include mq-down(md) {
+          font-size: 1.3rem;
+        }
       }
       .telNum {
         font-size: 3.4rem;
@@ -1318,6 +1713,9 @@
         justify-content: flex-start;
         align-items: flex-end;
         font-weight: 400;
+        @include mq-down(md) {
+          font-size: 2.8rem;
+        }
 
         &:before {
           content: 'tel.';
@@ -1337,24 +1735,61 @@
       height: 63px;
       flex-shrink: 0;
       margin-left: 3%;
-    }
-    .pagetop {
-      width: 64px;
-      height: 64px;
-      position: absolute;
-      top: 50%;
-      right: 32px;
-      transform: translateY(-50%) scale(1);
-      transition: transform 0.3s;
-
-      @include hover {
-        transform: translateY(-50%) scale(1.1);
+      @include mq-down(md) {
+        height: 180px;
+        height: 52px;
+        flex: 0 0 32%;
       }
     }
   }
   &.js-scroll {
     .floatingBox {
       transform: translateY(0);
+    }
+  }
+
+  // ページトップボタン
+  .pagetop {
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    bottom: 18px;
+    right: 32px;
+    z-index: 101;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.4s, opacity 0.4s;
+    @include mq-down(md) {
+      width: 60px;
+      height: 60px;
+      right: 10px;
+      bottom: calc(10px + 86px);
+    }
+
+    a {
+      transition: transform;
+      display: block;
+      transition: transform 0.3s;
+
+      @include hover {
+        transform: scale(1.1),;
+      }
+    }
+  }
+  &.js-scroll {
+    .pagetop {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // クッキーアイコン
+  #ot-sdk-btn-floating.ot-floating-button {
+    left: 32px;
+    bottom: 28px;
+    @include mq-down(md) {
+      left: 10px;
+      bottom: calc(10px + 86px);
     }
   }
 
