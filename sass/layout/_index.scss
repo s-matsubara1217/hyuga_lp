@@ -417,6 +417,16 @@
             .lead {
               @include mq-down(md) {
                 width: 70%;
+                font-size: 2.2rem;
+              }
+              @include mq-down(xs) {
+                font-size: 2rem;
+              }
+            }
+            .desc {
+              font-size: 1.8rem;
+              @include mq-down(md) {
+                font-size: 1.6rem;
               }
             }
           }

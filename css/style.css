@@ -3492,6 +3492,20 @@ a {
 @media screen and (max-width: 768px) {
   .lp .main .sec__text01 .text__body .lead {
     width: 70%;
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .lp .main .sec__text01 .text__body .lead {
+    font-size: 2rem;
+  }
+}
+.lp .main .sec__text01 .text__body .desc {
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 768px) {
+  .lp .main .sec__text01 .text__body .desc {
+    font-size: 1.6rem;
   }
 }
 .lp .main .sec__text01 .text__illustHolder .illust {
