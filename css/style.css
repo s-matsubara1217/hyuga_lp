@@ -640,6 +640,15 @@ a {
   }
 }
 
+.u-tabOnly {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .u-tabOnly {
+    display: block;
+  }
+}
+
 /* クッキーアイコン */
 #ot-sdk-btn-floating.ot-floating-button .ot-floating-button__front button {
   outline: none;
@@ -3065,6 +3074,11 @@ a {
     font-size: 5.6rem;
   }
 }
+@media all and (-ms-high-contrast: none) {
+  .c-borderFont {
+    text-shadow: #333 1px 1px 0px, #333 -1px 1px 0px, #333 1px -1px 0px, #333 -1px -1px 0px, 5px 5px 0px #ccff99;
+  }
+}
 
 /*========================================
   LP
@@ -3415,6 +3429,11 @@ a {
 @media screen and (max-width: 768px) {
   .lp .main .sec__text .text__body .lead {
     font-size: 2rem;
+  }
+}
+@media all and (-ms-high-contrast: none) {
+  .lp .main .sec__text .text__body .lead {
+    font-size: 3.1rem;
   }
 }
 .lp .main .sec__text .text__body .desc {
@@ -4141,12 +4160,19 @@ a {
 .lp .main .sec__requirement .requirement__list__item .dtHolder {
   flex: 0 0 18%;
   max-width: 160px;
+  padding-right: 2.4%;
+}
+@media screen and (max-width: 768px) {
+  .lp .main .sec__requirement .requirement__list__item .dtHolder {
+    max-width: none;
+    padding-right: 0;
+  }
 }
 .lp .main .sec__requirement .requirement__list__item dt {
   font-weight: bold;
   color: #1d9a78;
   background: linear-gradient(transparent 60%, #e5ffcc 60%);
-  display: inline-block;
+  display: inline;
 }
 .lp .main .sec__requirement .requirement__list__item .ddHolder {
   flex: 1 1 auto;
@@ -4170,6 +4196,9 @@ a {
 .lp .main .sec__requirement .requirement__list__item dd .menu__link {
   position: relative;
   transition: opacity 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 @media (hover: hover) and (pointer: fine) {
   .lp .main .sec__requirement .requirement__list__item dd .menu__link:hover {
@@ -4266,6 +4295,9 @@ a {
   .lp .main .sec__requirement .requirement__list__item dd .salary {
     margin-left: 24px;
   }
+}
+.lp .main .sec__requirement .requirement__list__item dd .job {
+  margin-left: 8px;
 }
 .lp .main .sec__info {
   margin-top: -60px;
@@ -4369,7 +4401,14 @@ a {
   font-weight: bold;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  padding-right: 2.4%;
+}
+@media screen and (max-width: 768px) {
+  .lp .main .sec__info .info__list__item dt {
+    padding-right: 0;
+    max-width: none;
+  }
 }
 .lp .main .sec__info .info__list__item dt:before {
   content: "";
@@ -4381,6 +4420,13 @@ a {
   background-repeat: no-repeat;
   margin-right: 7.7%;
   pointer-events: none;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+@media screen and (max-width: 768px) {
+  .lp .main .sec__info .info__list__item dt:before {
+    margin-right: 4%;
+  }
 }
 .lp .main .sec__info .info__list__item dd {
   flex: 1 1 auto;
@@ -4480,6 +4526,11 @@ a {
 .lp .footer__access__inner {
   max-width: 420px;
 }
+@media screen and (-ms-high-contrast: none) and (min-width: 768px) and (max-width: 1200px) {
+  .lp .footer__access__inner {
+    padding: 0 40px;
+  }
+}
 .lp .footer__access__mapHolder {
   flex: 0 0 62%;
   overflow: hidden;
@@ -4490,6 +4541,12 @@ a {
 @media screen and (max-width: 768px) {
   .lp .footer__access__mapHolder {
     padding-bottom: 60%;
+  }
+}
+@media all and (-ms-high-contrast: none) {
+  .lp .footer__access__mapHolder {
+    height: 500px;
+    padding-bottom: 0;
   }
 }
 .lp .footer__access__mapHolder iframe {
@@ -4509,6 +4566,12 @@ a {
   padding: 40px 5%;
   background-image: url(../img/index/bg_lightblue.png);
   background-repeat: repeat;
+}
+@media all and (-ms-high-contrast: none) {
+  .lp .footer__access__txtHolder {
+    width: 38%;
+    flex: auto;
+  }
 }
 .lp .footer__access__decoHolder .deco {
   position: absolute;

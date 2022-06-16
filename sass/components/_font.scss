@@ -13,4 +13,7 @@
   @include mq-down(md) {
     font-size: 5.6rem;
   }
+  @media all and (-ms-high-contrast: none) {
+    text-shadow: #333 1px 1px 0px, #333 -1px 1px 0px,#333 1px -1px 0px, #333 -1px -1px 0px, 5px 5px 0px #ccff99;
+  }
 }
